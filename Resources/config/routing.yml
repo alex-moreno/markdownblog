@@ -1,0 +1,8 @@
+symblog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SymblogBundle:Default:index }
+
+symblog_blog:
+    path:     /blog/{title}
+    defaults: { _controller: SymblogBundle:Blog:readPost, folder: '/../Resources/posts/' }
+
