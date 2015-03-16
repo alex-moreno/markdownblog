@@ -2,6 +2,10 @@ symblog_homepage:
     path:     /hello/{name}
     defaults: { _controller: SymblogBundle:Default:index }
 
+symblog_blog_list:
+    path:     /blog/
+    defaults: { _controller: SymblogBundle:Blog:listPosts , folder: '/../Resources/posts/' }
+
 symblog_blog:
     path:     /blog/{title}
     defaults: { _controller: SymblogBundle:Blog:readPost, folder: '/../Resources/posts/' }

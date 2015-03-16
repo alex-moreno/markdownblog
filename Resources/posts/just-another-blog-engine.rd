@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "My post"
-description: ""
+title: "Just another blog"
+description: "Description"
 category: blog
 author: alex_moreno
 comments: true
@@ -9,17 +9,15 @@ comments: true
 
 #Testing h1
 
-After that
+Back in my university years ...
 
-##Testing h2
+Does it make sense another **blog engine**? Probably not, but that's not the point.
 
 
-* first
-* sec
+* fun
+* learning
+* contribute
 
-**emphasis**
-
-**emphasis**
 
 
 ```
