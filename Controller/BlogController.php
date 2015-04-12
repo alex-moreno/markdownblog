@@ -44,14 +44,18 @@ class BlogController extends Controller
 
     /**
      * List posts in the given folder.
+     *
      * @param int $index
+     *   Index of which post to display.
      * @param $folder
+     *   Folder where to find the list of posts.
+     *
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function listPostsAction($index = 0, $folder) {
 
         $finder = new Finder();
-        // Finder will contains the list of files.
+        // Finder will contain the list of files.
         $finder->files()->in(__DIR__ . $folder);
         // Just read .rd files.
         $finder->name('*.rd');

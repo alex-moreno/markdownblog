@@ -43,7 +43,6 @@ class BlogFileReader {
         if ($existsTitle > 0) {
             $this->findString($this->file, $existsTitle);
 
-            dump($title);
         }
 
         return $title;
@@ -56,13 +55,9 @@ class BlogFileReader {
         // We +1 to search for the next one and avoid the one on the begining.
         $endPosition = strpos($string, self::SEPARATOR, $startPosition + 1);
 
-        dump($startPosition);
-        dump($endPosition);
-
         // Read from endposition to startposition.
         $string = substr($string, $startPosition, $endPosition - $startPosition);
 
-        dump($string);
         // Curate the result.
         $string = str_replace('"', '', $string);
 
@@ -99,6 +94,12 @@ class BlogFileReader {
         return 'One nice category';
     }
 
+    /**
+     * Fetch path of the file.
+     *
+     * @return String
+     *   Path of the file.
+     */
     public function fetchPath() {
 
         return $this->file;
