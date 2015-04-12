@@ -1,0 +1,34 @@
+{% extends "SymblogBundle::base.html.twig" %}
+
+    {% block title %}List of posts{% endblock %}
+
+    {% block body %}
+
+        {% for post in list %}
+
+            <div class="post">
+                <section>
+                    <div class="post-preview col-xs-10  no-gutter">
+
+                        <h2><a href="{{ post.path }}">{{ post.title }}</a></h2>
+                        <p>{{ post.description }}</p>
+
+                        <p class="meta">
+                            <a class="" href="category.html">{{ post.author }}</a> in <a class="" href="category.html">{{ post.category }}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> 23 minute read
+                        </p>
+                    </div>
+
+                    <div class=" col-xs-2  no-gutter">
+                        {% image '@SymblogBundle/Resources/public/images/theme/profile-1.jpg' %}
+                        <img src="{{ asset_url }}" alt="user-image" />
+                        {% endimage %}
+                    </div>
+
+                </section>
+            </div>
+
+        {% endfor %}
+
+    {% endblock %}
+
+
